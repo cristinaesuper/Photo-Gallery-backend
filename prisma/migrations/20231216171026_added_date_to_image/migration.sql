@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Image" ADD COLUMN     "date" TEXT NOT NULL DEFAULT '2023-12-16 19:09:55';

@@ -11,8 +11,29 @@ datasource db {
 }
 
 model User {
-  id        Int    @id @default(autoincrement())
-  email     String @unique
-  firstName String
-  lastName  String
+  id       Int     @id @default(autoincrement())
+  email    String  @unique
+  name     String
+  password String
+  admin    Boolean @default(false)
+  Image    Image[]
+  Likes    Likes[]
+}
+
+model Image {
+  id          Int     @id @default(autoincrement())
+  url         String  @unique
+  description String?
+  date        String  @default("2023-12-16 19:09:55")
+  userId      Int
+  user        User    @relation(fields: [userId], references: [id])
+  Likes       Likes[]
+}
+
+model Likes {
+  id      Int   @id @default(autoincrement())
+  userId  Int
+  imageId Int
+  user    User  @relation(fields: [userId], references: [id])
+  image   Image @relation(fields: [imageId], references: [id])
 }

@@ -9,8 +9,11 @@ export class UserEntity implements User {
   email: string;
 
   @ApiProperty()
-  firstName: string;
+  name: string;
 
   @ApiProperty()
-  lastName: string;
+  password: string;
+
+  @ApiProperty()
+  admin: boolean;
 }

@@ -10,8 +10,8 @@ async function main() {
     update: {},
     create: {
       email: 'a@a.com',
-      firstName: 'Cristina',
-      lastName: 'Man'
+      name: 'Cristina',
+      password: 'Man'
     },
   });
 
@@ -20,8 +20,8 @@ async function main() {
     update: {},
     create: {
       email: 'b@b.com',
-      firstName: 'Catalin',
-      lastName: 'Man'
+      name: 'Catalin',
+      password: 'Man'
     },
   });
 
